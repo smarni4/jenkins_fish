@@ -10,7 +10,6 @@ app = Flask(__name__)
 model = joblib.load('Random.pkl')
 onehot = joblib.load('one_joblib')
 
-
 @app.route('/')
 @app.route('/main')
 def main():
