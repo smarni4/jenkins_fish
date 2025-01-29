@@ -17,17 +17,19 @@ pipeline {
             steps {
                 echo 'Creating and setting up virtual environment...'
                 sh 'sudo apt install python3.12-venv -y'
+		sh 'sudo apt update'
 		sh 'python3 -m venv ${VENV_DIR}'
                 sh 'source ${VENV_DIR}/bin/activate && pip install -r requirements.txt'
-            }
+            	echo 'Requirements installed succesfully'
+	    }
         }
 
-        stage('Run app') {
-            steps {
-                echo 'Running app'
-                sh 'source ${VENV_DIR}/bin/activate && python3 app.py'
-            }
-        }
+#        stage('Run app') {
+#            steps {
+#                echo 'Running app'
+#                sh 'source ${VENV_DIR}/bin/activate && python3 app.py'
+#            }
+#        }
     }
 }
 
