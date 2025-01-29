@@ -23,14 +23,15 @@ pipeline {
             	echo 'Requirements installed succesfully'
 	    }
         }
-
-#        stage('Run app') {
-#            steps {
-#                echo 'Running app'
-#                sh 'source ${VENV_DIR}/bin/activate && python3 app.py'
-#            }
-#        }
-    }
+/*
+        stage('Run app') {
+            steps {
+                echo 'Running app'
+                sh 'source ${VENV_DIR}/bin/activate && python3 app.py'
+            }
+        }
+   */ 
+   }
 }
 
 
