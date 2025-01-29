@@ -19,6 +19,7 @@ pipeline {
                 sh 'sudo apt install python3.12-venv -y'
 		sh 'sudo apt update'
 		sh 'python3 -m venv ${VENV_DIR}'
+		sh 'ls ~/.venvs'
 		//sh 'bash -c source ${VENV_DIR}/bin/activate && pip3 install -r requirements.txt'
             	echo 'Requirements installed succesfully'
 	    }
