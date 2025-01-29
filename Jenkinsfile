@@ -16,7 +16,7 @@ pipeline {
         stage('Setup Python Environment') {
             steps {
                 echo 'Creating and setting up virtual environment...'
-                sh 'sudo apt install python3.12-venv'
+                sh 'sudo apt install python3.12-venv -y'
 		sh 'python3 -m venv ${VENV_DIR}'
                 sh 'source ${VENV_DIR}/bin/activate && pip install -r requirements.txt'
             }
